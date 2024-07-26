@@ -215,8 +215,10 @@ def main():
 
         wait_input = chat_completions(messages)
 
-        print("Tasks:")
+        print()
+        print("Current Tasks:")
         print(get_tasks())
+        print()
 
 
 if __name__ == "__main__":
