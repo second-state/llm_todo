@@ -160,7 +160,7 @@ def handler_llm_response(messages, stream):
         delta = chunk.choices[0].delta
         print(delta.content, end="")
         content += delta.content
-        if len(delta.tool_calls) == 0:
+        if delta.tool_calls is None or (delta.tool_calls) == 0:
             pass
         else:
             if len(tools) == 0:
